@@ -91,3 +91,120 @@ let users = [
     { name: "Henry Adams", username: "henryadams", password: "adams5678" }
 ]
 console.log(users[0].password)
+users.forEach((user)=> console.log(user.password))
+// -----------------5--------------
+let temperatures = [
+    {day:'Sunday', morning: 14, afternoon: 29, evening: 18},
+    {day:'Monday', morning: 15, afternoon: 31, evening: 19},
+    {day:'Tuesday', morning: 15, afternoon: 34, evening: 20},
+    {day:'Wednesday', morning: 14, afternoon: 30, evening: 19},
+    {day:'Thursday', morning: 13, afternoon: 27, evening: 17},
+    {day:'Friday', morning: 12, afternoon: 25, evening: 18},
+    {day:'Saturday', morning: 16, afternoon: 38, evening: 20},
+]
+let temperatures2 = [
+    [14,29,18],
+    [15,31,19],
+    [15,34,20],
+    [14,30,19],
+    [13,27,17],
+    [12,25,18],
+    [16,38,20]
+]
+// ---------Логічні розгалуження:----------
+// ----1---
+let x = 25
+if (x !== 0){
+    console.log('Вірно')
+}else {
+    console.log('Невірно')
+}
+let a = 1;
+console.log(a !== 0 ? 'Вірно' : 'Невірно')
+
+let b = 0;
+console.log(b !== 0 ? 'Вірно' : 'Невірно')
+
+let c = -3;
+console.log(c !== 0 ? 'Вірно' : 'Невірно')
+// ---------2---------
+let time = 33;
+if(time <= 15){
+    console.log('Part one');
+}else if (time <= 30){
+    console.log('Part two');
+}else if (time <= 45) {
+    console.log('Part three');
+}else if(time <= 59) {
+    console.log('Part four')
+}
+// ---------3--------
+let day = 19;
+if (day <= 10){
+    console.log('The first part of Month');
+}else if (day <= 20){
+    console.log('The second part of Month');
+}else if (day <= 31){
+    console.log('The third part of Month');
+}
+// ----------------4-----------
+// let days = prompt('Day of the week:');
+// switch (days){
+//     case ('1'):
+//         console.log('Monday');
+//         break;
+//     case ('2'):
+//         console.log('Tuesday');
+//         break;
+//     case ('3'):
+//         console.log('Wednesday');
+//         break;
+//     case ('4'):
+//         console.log('Thursday');
+//         break;
+//     case ('5'):
+//         console.log('Friday');
+//         break;
+//     case ('6'):
+//         console.log('Saturday');
+//         break;
+//     case ('7'):
+//         console.log('Sunday');
+//         break;
+// }
+// ----------------5-------------
+let numb1 = 55;
+let numb2 = 73;
+if (numb1 > numb2){
+    console.log(`Максимальне число ${numb1}`)
+}else if (numb1 < numb2){
+    console.log(`Максимальне число ${numb2}`)
+}else {
+    console.log(`Числа рівні`);
+}
+// ---------6-------------
+let y = undefined;
+if (!y) {
+    y = 'default';
+}
+    console.log(y)
+// --------------7-------------
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+if (coursesAndDurationArray[0].monthDuration > 5){
+    console.log('Super')
+}
+if (coursesAndDurationArray[1].monthDuration > 5){
+    console.log('Super')
+}
+coursesAndDurationArray.forEach((course) => {
+    if (course.monthDuration > 5) {
+        console.log(`${course.title}: Super`)
+    }
+})
