@@ -31,10 +31,13 @@ let coursesAndDurationArray = [
     {title: 'FullStack', monthDuration: 7},
     {title: 'Frontend', monthDuration: 4}
 ];
-coursesAndDurationArray.forEach((item) => {
+
+coursesAndDurationArray.forEach((item, index) => {
     const div = document.createElement('div');
+    div.classList.add('course');
     div.innerHTML = `<h4>Title: ${item.title}</h4> <i>MonthDuration: ${item.monthDuration}</i>`
-    document.body.appendChild(div)
+
+    document.body.appendChild(div);
 })
 // -----------------4-------------
 coursesAndDurationArray.map(item => {

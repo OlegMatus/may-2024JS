@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="sessionList"></div>
+<script>
+
+    const sessionList = JSON.parse(localStorage.getItem('sessionsList')) || [];
+
+    const block = document.getElementsByClassName('sessionList')[0];
+    if (sessionList.length > 0) {
+        const ul = document.createElement('ul');
+        sessionList.forEach(session => {
+            const li = document.createElement('li');
+            const sessionDate = new Date(session).toUTCString();
+            li.textContent = `Date visit : ${sessionDate}`
+            ul.appendChild(li);
+        })
+        block.appendChild(ul);
+    }else {
+        block.innerText = 'No sessions recorded!'
+    }
+</script>
+</body>
+</html>
